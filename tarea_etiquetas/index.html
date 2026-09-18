@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica HTML - 20+ Etiquetas</title>
+
+    <!-- El <style> va en el <head>, así el navegador conoce los estilos antes de dibujar la página -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        section {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #999;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        figure {
+            text-align: center;
+        }
+        blockquote {
+            border-left: 4px solid #2c3e50;
+            padding-left: 12px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. header: encabezado de la página -->
+    <header>
+        <h1>Práctica de Etiquetas HTML5</h1>
+        <!-- 2. h1: título principal -->
+    </header>
+
+    <!-- 3. nav: menú de navegación -->
+    <nav>
+            <ul> <!-- ul: crea una lista sin orden -->
+                <li><a href="#texto">Texto</a></li> <!-- li: representa un elemento de la lista -->
+                <li><a href="#lista">Listas</a></li>
+                <li><a href="#tabla">Tabla</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#formulario">Formulario</a></li>
+        </ul>
+    </nav>
+
+    <!-- 4. main: contenido principal, único por página -->
+    <main>
+
+        <!-- 5. section: bloque temático -->
+        <section id="texto">
+            <h2>1. Etiquetas de texto</h2>
+            <p>
+                Parrafo de ejemplo con <strong>texto en negrita</strong> y
+                <em>texto en cursiva</em>.
+                <em>enfatizado</em> (cursiva semántica).
+                También existe <mark>texto resaltado</mark> y
+                <small>texto pequeño</small>.
+            </p>
+            <!-- blockquote: cita textual -->
+            <blockquote>
+                "HTML describe la estructura de una página mediante elementos."
+            </blockquote>
+            <p>Salto de línea sin nuevo párrafo:<br>segunda línea del mismo párrafo.</p>
+            <!-- hr: línea divisoria horizontal -->
+            <hr>
+        </section>
+
+        <!-- 6. section: listas -->
+        <section id="lista">
+            <h2>2. Listas</h2>
+            <h3>Lista no ordenada</h3>
+            <ul> <!-- ul: crea una lista con viñetas -->
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <h3>Lista ordenada</h3>
+            <ol> <!-- ol: crea una lista numerada -->
+                <li>Planificar</li>
+                <li>Estructurar</li>
+                <li>Publicar</li>
+            </ol>
+        </section>
+
+        <!-- 7. section: tabla -->
+        <section id="tabla">
+            <h2>3. Tabla</h2>
+            <table> <!-- table: crea una tabla para organizar datos -->
+                <thead> <!-- thead: contiene el encabezado de la tabla -->
+                    <tr> <!-- tr: representa una fila -->
+                        <th>Etiqueta</th> <!-- th: celda de encabezado -->
+                        <th>Función</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- tbody: contiene las filas principales -->
+                    <tr>
+                        <td>table</td> <!-- td: celda normal de la tabla -->
+                        <td>Contenedor de la tabla</td>
+                    </tr>
+                    <tr>
+                        <td>tr</td>
+                        <td>Fila</td>
+                    </tr>
+                    <tr>
+                        <td>td / th</td>
+                        <td>Celda normal / celda de encabezado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 8. section: multimedia -->
+        <section id="multimedia">
+            <h2>4. Imagen con figure y figcaption</h2>
+            <figure> <!-- figure: agrupa una imagen y su descripción -->
+                <img src="https://placehold.co/400x200" alt="Imagen de ejemplo para la práctica" width="400"> <!-- img: muestra una imagen -->
+                <figcaption>Figura 1: imagen de ejemplo</figcaption> <!-- figcaption: describe la imagen -->
+            </figure>
+        </section>
+
+        <!-- 9. section: formulario -->
+        <section id="formulario">
+            <h2>5. Formulario</h2>
+            <form action="#" method="POST"> <!-- form: crea un formulario para recibir datos -->
+                <div>
+                    <label for="nombre">Nombre:</label> <!-- label: identifica un campo -->
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required> <!-- input: permite escribir datos -->
+                </div>
+                <br>
+                <div>
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <br>
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="1" max="99">
+                </div>
+                <br>
+                <div>
+                    <label for="curso">Curso favorito:</label>
+                    <select id="curso" name="curso"> <!-- select: crea una lista desplegable -->
+                        <option value="html">HTML</option> <!-- option: representa una opción -->
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="comentario">Comentario:</label><br>
+                    <textarea id="comentario" name="comentario" rows="3" cols="40"></textarea> <!-- textarea: permite escribir texto largo -->
+                </div>
+                <br>
+                <button type="submit">Enviar</button> <!-- button: crea un botón interactivo -->
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 10. footer: pie de página -->
+    <footer>
+        <p>&copy; 2026 Práctica HTML. Elaborado para taller de Desarrollo Web.</p>
+    </footer>
+
+</body>
+</html>
