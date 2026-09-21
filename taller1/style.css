@@ -1,0 +1,32 @@
+/*FASE 2*/
+body {               /* selector: a quién se aplica */
+    margin: 0;         /* propiedad: valor */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+/*FASE 3*/
+.contenedor {
+    width: 80%;
+    margin: 20px auto; /* Centrado horizontal */
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/*FASE 4*/
+.habilidades {
+display: flex;
+justify-content: space-around;
+list-style: none;
+padding: 0;
+}
