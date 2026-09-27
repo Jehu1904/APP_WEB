@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingreso de Datos de Clientes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Contenedor principal: envuelve todo el formulario -->
+<div id="contenedor-principal">
+
+  <div id="encabezado">
+    <h1>Registro de Clientes</h1>
+    <p>Complete todos los campos para registrar un nuevo cliente</p>
+  </div>
+
+  <div id="contenido">
+
+    <!-- El atributo novalidate desactiva la validación nativa del navegador para que se muestren solo los mensajes personalizados de JS -->
+    <form id="form-cliente" novalidate>
+
+      <!-- CÉDULA -->
+      <div class="campo">
+        <label for="cedula">Cédula</label>
+        <input
+          type="text"
+          id="cedula"
+          name="cedula"
+          maxlength="10"
+          inputmode="numeric"
+          placeholder="Ej: 1312345678"
+          autocomplete="off">
+        <span class="mensaje-error" id="error-cedula"></span>
+      </div>
+
+      <!-- NOMBRE -->
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          maxlength="30"
+          placeholder="Ej: Jehu Villamar"
+          autocomplete="off">
+        <span class="mensaje-error" id="error-nombre"></span>
+      </div>
+
+      <!-- DIRECCIÓN  -->
+      <div class="campo">
+        <label for="direccion">Dirección</label>
+        <input
+          type="text"
+          id="direccion"
+          name="direccion"
+          maxlength="50"
+          placeholder="Ej: Av. Flavio Reyes y Malecón, Manta"
+          autocomplete="off">
+        <span class="mensaje-error" id="error-direccion"></span>
+      </div>
+
+      <!--  TELÉFONO CELULAR  -->
+      <div class="campo">
+        <label for="telefono">Teléfono celular</label>
+        <input
+          type="text"
+          id="telefono"
+          name="telefono"
+          maxlength="10"
+          inputmode="numeric"
+          placeholder="Ej: 0998990854"
+          autocomplete="off">
+        <span class="mensaje-error" id="error-telefono"></span>
+      </div>
+
+      <!--  CORREO ELECTRÓNICO  -->
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input
+          type="text"
+          id="correo"
+          name="correo"
+          placeholder="Ej: cliente@correo.com"
+          autocomplete="off">
+        <span class="mensaje-error" id="error-correo"></span>
+      </div>
+
+      <button type="submit" id="btn-registrar">Registrar Cliente</button>
+
+      <!-- Mensaje de éxito, oculto por defecto -->
+      <div id="mensaje-exito">✅ Cliente registrado correctamente.</div>
+
+    </form>
+
+    <!--  TABLA DE CLIENTES REGISTRADOS  -->
+    <div id="seccion-tabla">
+      <h2>Clientes Registrados</h2>
+      <table id="tabla-clientes">
+        <thead>
+          <tr>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla">
+          <!-- Las filas se agregan aquí dinámicamente con JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
