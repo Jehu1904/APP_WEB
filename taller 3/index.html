@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle de 5 iteraciones</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="tarjeta">
+        <h1>Operaciones con bucle</h1>
+        <p class="sub">Ingresa 2 números y se ejecutarán 5 iteraciones.</p>
+
+        <div class="campos">
+            <label>Número 1
+                <input type="number" id="num1" step="any" placeholder="Ej: 10">
+            </label>
+            <label>Número 2
+                <input type="number" id="num2" step="any" placeholder="Ej: 3">
+            </label>
+        </div>
+
+        <button id="btnCalcular">Ejecutar bucle</button>
+        <p id="error" class="error"></p>
+
+        <table id="tabla" class="oculto">
+        <thead>
+            <tr><th>Iteración</th><th>Operación</th><th>Resultado</th></tr>
+        </thead>
+        <tbody id="resultados"></tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
