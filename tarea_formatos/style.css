@@ -1,0 +1,108 @@
+:root {
+    --color-primario: #2c3e50;
+    --color-exito: #27ae60;
+    --color-peligro: #e74c3c;
+    --fondo: #f4f7f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.rejilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px 20px;
+}
+
+@media (min-width: 700px) {
+    .rejilla {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.campo {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Mensajes de error de las validaciones */
+.error {
+    display: block;
+    min-height: 16px;
+    margin-top: 4px;
+    color: var(--color-peligro);
+    font-size: 12px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-exito);
+}
+
+button:hover { opacity: 0.9; }
+
+/* Tabla */
+.tabla-responsiva {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    padding: 8px 6px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+tr:hover { background-color: #f1f1f1; }
